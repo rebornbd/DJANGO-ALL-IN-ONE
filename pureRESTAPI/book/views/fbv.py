@@ -47,10 +47,10 @@ def FBV_CreateView(request):
         "title": book.title,
         "writer": book.writer
       }
-    except Exception as e:
+    except Exception as err:
       data = {
         "success": False,
-        "message": "data is not valid!"
+        "message": str(err)
       }
   return JsonResponse(data)
 
@@ -85,10 +85,10 @@ def FBV_UpdateView(request):
         "writer": book.writer
       }
 
-    except Exception as e:
+    except Exception as err:
       data = {
         "success": False,
-        "message": "data is not valid!"
+        "message": str(err)
       }
   return JsonResponse(data)
 
@@ -109,9 +109,9 @@ def FBV_DeleteView(request):
         "title": book.title,
         "writer": book.writer
       }
-    except Exception as e:
+    except Exception as err:
       data = {
         "success": False,
-        "message": "data is not valid!"
+        "message": str(err)
       }
   return JsonResponse(data)
