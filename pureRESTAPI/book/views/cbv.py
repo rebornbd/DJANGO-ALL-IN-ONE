@@ -1,3 +1,4 @@
+from django.http.response import StreamingHttpResponse
 from django.views.generic import View
 from django.http import JsonResponse
 import json
@@ -32,10 +33,10 @@ class CBV_View(View):
         "title": book.title,
         "writer": book.writer
       }
-    except Exception as e:
+    except Exception as err:
       res = {
         "success": False,
-        "message": "CBV: create view"
+        "message": str(err)
       }
     return JsonResponse(res)
 
@@ -65,10 +66,10 @@ class CBV_View(View):
         "writer": book.writer
       }
 
-    except Exception as e:
+    except Exception as err:
       res = {
         "success": False,
-        "message": "data is not valid!"
+        "message": str(err)
       }
     return JsonResponse(res)
 
@@ -87,9 +88,9 @@ class CBV_View(View):
         "title": book.title,
         "writer": book.writer
       }
-    except Exception as e:
+    except Exception as err:
       res = {
         "success": False,
-        "message": "data is not valid!"
+        "message": str(err)
       }
     return JsonResponse(res)
