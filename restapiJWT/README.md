@@ -12,9 +12,9 @@ general
 admin
 ```
 
-#### methods & permession
+#### methods & permission
 ```
-method  :   view    :   permession
+method  :   view    :   permission
 ----------------------------------
 GET     |  LVIEW    |   G, A, unregister
 POST    |  CVIEW    |   G, A
