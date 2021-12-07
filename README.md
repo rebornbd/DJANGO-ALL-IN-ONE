@@ -6,4 +6,5 @@
 02) pure restapi with JWT
 03) django-celery-redis
 04) django-redis-cache
+05) django-docker
 ```
